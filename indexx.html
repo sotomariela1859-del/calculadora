@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importando Vue JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Calculadora con Vue</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>Mi Calculadora</h1>
+
+        <h2>Calculadora de 6 operaciones</h2>
+
+        <p>Primer número:</p>
+        <input type="number" v-model.number="numero1">
+
+        <p>Segundo número:</p>
+        <input type="number" v-model.number="numero2">
+
+        <br><br>
+
+        <button @click="sumar">Sumar (+)</button>
+
+        <button @click="restar">Restar (-)</button>
+
+        <button @click="multiplicar">Multiplicar (*)</button>
+
+        <button @click="dividir">Dividir (/)</button>
+
+        <button @click="potencia">Potencia (^)</button>
+
+        <button @click="raiz">Raíz cuadrada (√)</button>
+
+        <h2>Resultado:</h2>
+
+        <h3>{{ resultado }}</h3>
+
+        <button @click="limpiar">Limpiar</button>
+
+    </div>
+
+    <!-- Importando el archivo main.js -->
+    <script src="css/js/main.js"></script>
+
+    <!-- Montando la aplicación Vue -->
+    <script>
+        app.mount("#app");
+    </script>
+
+</body>
+</html>
+
